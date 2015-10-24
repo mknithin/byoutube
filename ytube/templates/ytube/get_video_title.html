@@ -1,0 +1,9 @@
+{%extends "layout.html"%}
+{% block title%} youtube browser{% endblock%}
+
+{% block content%} 
+	<form name="searchform",action="/youtube",method="post">{%csrf_token%}
+		Search_string <input type="text" onkeydown="myfunction(this.value)" > </input>
+	</form>
+	<p id="result"></p>
+{% endblock %}
